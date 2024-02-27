@@ -6,7 +6,6 @@
             <field name="quantity">200</field>
             <field name="metric_unit">unidades</field>
         </record>
-
         <record model="instalacion.material" id="instalacion.Tornillo_M10_acero_galvanizado">
             <field name="name">100002</field>
             <field name="description">Tornillo M10 acero galvanizado</field>
@@ -181,6 +180,5 @@
             <field name="quantity">30</field>
             <field name="metric_unit">unidades</field>
         </record>
-
     </data>
 </odoo>

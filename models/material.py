@@ -8,7 +8,7 @@ class Material(models.Model):
      _description = 'Stock en almacen'
 
      name = fields.Char(string='codigo ', required=True)
-     description = fields.Char(string= 'descripcion', required=True)
+     description = fields.Text(string= 'descripcion', required=True)
      quantity = fields.Integer(string='cantidad')
      metric_unit = fields.Selection([
           ('unidades','unidades'),

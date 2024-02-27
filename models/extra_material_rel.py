@@ -7,7 +7,7 @@ from odoo.addons import mail
 
 class ExtraMaterialRel(models.Model):
      _name = 'instalacion.extra_material_rel'
-     _description = 'material extra para la ot'
+     _description = 'material extra para la orden de trabajo'
 
      
      name= fields.Char(string='orden de reserva')
