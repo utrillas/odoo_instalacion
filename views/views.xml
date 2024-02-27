@@ -26,6 +26,41 @@
         </tree>
       </field>
     </record>
+
+    <!--Vista interior de empleados-->
+    <record model="ir.ui.view" id="instalacion.employee_window_tree">
+      <field name="name">instalacion lista</field>
+      <field name="model">instalacion.employee</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="instalacion.employee_window_form">
+      <field name="name">Employee</field>
+      <field name="model">instalacion.employee</field>
+      <field name="arch" type="xml">
+        <form>
+        <!--Vista datos generales-->
+          <sheet>
+                <group>
+                    <field name="name"/>
+                    <field name="firstname"/>
+                    <field name="employee_name"/>
+                    <field name="email"/>
+                    <field name="studies"/>
+                    <field name="employee_address"/>
+                    <field name="personal_phone"/>
+                    <field name="company_phone"/>
+                    <field name="position"/>
+                    <field name="preventive_resource" attrs="{'invisible': [('position', '!=', 'tecnico_de_instalaciones')]}"/>
+                </group>
+            </sheet>
+        </form>
+      </field>
+    </record>
+      
     <!-- explicit list view definition -->
 
     <record model="ir.ui.view" id="instalacion.instalacion_window_tree">

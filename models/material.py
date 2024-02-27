@@ -7,7 +7,7 @@ class Material(models.Model):
      _name = 'instalacion.material'
      _description = 'Stock en almacen'
 
-     name = fields.Char(string='codigo ', required=True)
+     name = fields.Char(string='codigo ', readonly=1)
      description = fields.Text(string= 'descripcion', required=True)
      quantity = fields.Integer(string='cantidad')
      metric_unit = fields.Selection([
@@ -23,5 +23,8 @@ class Material(models.Model):
           ('unique_product_code','unique(name)','El código ya existe')
      ]
 
-     #restriccion de usuarios a la creación de materiales   
-    
+        
+     @api.model
+     def create(self, vals):
+          vals['name'] = self.env['ir.sequence'].next_by_code('secuencia_material')
+          return super(Material,self).create(vals)

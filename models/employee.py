@@ -8,7 +8,7 @@ class Employee(models.Model):
      _description = 'employees of the company'
 
      #datos principales de los trabajadores
-     name = fields.Integer(string='Numero empleado', required = True)
+     name = fields.Integer(string='Numero empleado', readonly=1)
      firstname = fields.Char(string='Apellidos')
      employee_name = fields.Char(string='Nombre')
      email = fields.Char('Correo electronico')
@@ -17,15 +17,18 @@ class Employee(models.Model):
      personal_phone = fields.Char('Telefono personal')
      company_phone = fields.Char('Telefono empresa')
      position = fields.Selection([
-          ('director regional','Director regional'),
-          ('responsable Instalaciones','Responsable Instalaciones'),
-          ('project Manager','Project Manager'),
+          ('directorRegional','Director regional'),
+          ('responsable_instalaciones','Responsable Instalaciones'),
+          ('project_manager','Project Manager'),
           ('coordinador','Coordinador'),
-          ('tecnido documentacion','Tecnico documentacion'),
+          ('tecnido_documentacion','Tecnico documentacion'),
           ('secretaria','Secretaria'),
-          ('tecnico de instalaciones', 'tecnico de instalaciones')
+          ('tecnico_de_instalaciones', 'tecnico de instalaciones')
           ],required=True, default='Seleccione un cargo')
-     
+     preventive_resource = fields.Boolean(
+          string='Recurso preventivo',
+          store=True
+     )
 
      #restricciones
      _sql_constraints = [
@@ -34,5 +37,8 @@ class Employee(models.Model):
           ('unique_company_phone','unique(company_phone)','El numero de telefono ya esta siendo utilizado por otro empleado') 
      ]
 
-
      
+     @api.model
+     def create(self, vals):
+          vals['name'] = self.env['ir.sequence'].next_by_code('secuencia_empleado')
+          return super(Employee,self).create(vals)
