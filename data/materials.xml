@@ -1,0 +1,186 @@
+<odoo>
+    <data>
+        <record model="instalacion.material" id="instalacion.Tornillo_M8_acero_galvanizado">
+            <field name="name">100001</field>
+            <field name="description">Tornillo M8 acero galvanizado</field>
+            <field name="quantity">200</field>
+            <field name="metric_unit">unidades</field>
+        </record>
+
+        <record model="instalacion.material" id="instalacion.Tornillo_M10_acero_galvanizado">
+            <field name="name">100002</field>
+            <field name="description">Tornillo M10 acero galvanizado</field>
+            <field name="quantity">200</field>
+            <field name="metric_unit">unidades</field>
+        </record>
+        <record model="instalacion.material" id="instalacion.Arandela_M8_acero_galvanizado">
+            <field name="name">100003</field>
+            <field name="description">Arandela M8 acero galvanizado</field>
+            <field name="quantity">200</field>
+            <field name="metric_unit">unidades</field>
+        </record>
+        <record model="instalacion.material" id="instalacion.Arandela_M10_acero_galvanizado">
+            <field name="name">100004</field>
+            <field name="description">Arandela_M10_acero_galvanizado</field>
+            <field name="quantity">200</field>
+            <field name="metric_unit">unidades</field>
+        </record>
+        <record model="instalacion.material" id="instalacion.Tuerca_M8_acero_galvanizado">
+            <field name="name">100005</field>
+            <field name="description">Tuerca M8 acero galvanizado</field>
+            <field name="quantity">200</field>
+            <field name="metric_unit">unidades</field>
+        </record>
+        <record model="instalacion.material" id="instalacion.Tuerca_M10_acero_galvanizado">
+            <field name="name">100006</field>
+            <field name="description">Tuerca M10 acero galvanizado</field>
+            <field name="quantity">200</field>
+            <field name="metric_unit">unidades</field>
+        </record>
+        <record model="instalacion.material" id="instalacion.Cable_de_35mm_azul">
+            <field name="name">100007</field>
+            <field name="description">Cable de 35mm azul</field>
+            <field name="quantity">200</field>
+            <field name="metric_unit">metros</field>
+        </record>
+        <record model="instalacion.material" id="instalacion.Cable_de_35mm_negro">
+            <field name="name">100008</field>
+            <field name="description">Cable de 35mm negro</field>
+            <field name="quantity">200</field>
+            <field name="metric_unit">metros</field>
+        </record>
+        <record model="instalacion.material" id="instalacion.Cable_de_25mm_negro">
+            <field name="name">100009</field>
+            <field name="description">Cable de 25mm negro</field>
+            <field name="quantity">200</field>
+            <field name="metric_unit">metros</field>
+        </record>
+        <record model="instalacion.material" id="instalacion.Cable_de_25mm_azul">
+            <field name="name">100010</field>
+            <field name="description">Cable de 25mm azul</field>
+            <field name="quantity">200</field>
+            <field name="metric_unit">metros</field>
+        </record>
+        <record model="instalacion.material" id="instalacion.Cable_de_35mm_amarillo_verde">
+            <field name="name">100011</field>
+            <field name="description">Cable de 35mm amarillo/verde</field>
+            <field name="quantity">200</field>
+            <field name="metric_unit">metros</field>
+        </record>
+        <record model="instalacion.material" id="instalacion.Cable_de_25mm_amarillo_verde">
+            <field name="name">100012</field>
+            <field name="description">Cable de 25mm amarilla/verde</field>
+            <field name="quantity">200</field>
+            <field name="metric_unit">metros</field>
+        </record>
+        <record model="instalacion.material" id="instalacion.Mata_avispas">
+            <field name="name">100013</field>
+            <field name="description">Mata avispas</field>
+            <field name="quantity">30</field>
+            <field name="metric_unit">unidades</field>
+        </record>
+        <record model="instalacion.material" id="instalacion.Cable_coaxial">
+            <field name="name">100014</field>
+            <field name="description">Cable coaxial</field>
+            <field name="quantity">500</field>
+            <field name="metric_unit">metros</field>
+        </record>
+        <record model="instalacion.material" id="instalacion.Cable_fibra">
+            <field name="name">100015</field>
+            <field name="description">Cable fibra</field>
+            <field name="quantity">500</field>
+            <field name="metric_unit">metros</field>
+        </record>
+        <record model="instalacion.material" id="instalacion.Tubo_2'5m_16M">
+            <field name="name">100016</field>
+            <field name="description">Tubo 2.5m 16M</field>
+            <field name="quantity">30</field>
+            <field name="metric_unit">unidades</field>
+        </record>
+        <record model="instalacion.material" id="instalacion.Tubo_3m_16M">
+            <field name="name">100017</field>
+            <field name="description">Tubo 3m 16M</field>
+            <field name="quantity">30</field>
+            <field name="metric_unit">unidades</field>
+        </record>
+        <record model="instalacion.material" id="instalacion.termorretractil">
+            <field name="name">100018</field>
+            <field name="description">Termorretractil</field>
+            <field name="quantity">1000</field>
+            <field name="metric_unit">unidades</field>
+        </record>
+        <record model="instalacion.material" id="instalacion.Cinta_aislante_negra">
+            <field name="name">100019</field>
+            <field name="description">Cinta aislante negra</field>
+            <field name="quantity">30</field>
+            <field name="metric_unit">unidades</field>
+        </record>
+        <record model="instalacion.material" id="instalacion.Cinta_aislante_verde">
+            <field name="name">100020</field>
+            <field name="description">Cinta aislante verde</field>
+            <field name="quantity">30</field>
+            <field name="metric_unit">unidades</field>
+        </record>
+        <record model="instalacion.material" id="instalacion.Cinta_aislante_azul">
+            <field name="name">100021</field>
+            <field name="description">Cinta aislante azul</field>
+            <field name="quantity">30</field>
+            <field name="metric_unit">unidades</field>
+        </record>
+        <record model="instalacion.material" id="instalacion.Cinta_aislante_morada">
+            <field name="name">100022</field>
+            <field name="description">Cinta aislante morada</field>
+            <field name="quantity">30</field>
+            <field name="metric_unit">unidades</field>
+        </record>
+        <record model="instalacion.material" id="instalacion.Cinta_aislante_amarilla">
+            <field name="name">100023</field>
+            <field name="description">Cinta aislante amarilla</field>
+            <field name="quantity">30</field>
+            <field name="metric_unit">unidades</field>
+        </record>
+        <record model="instalacion.material" id="instalacion.Cinta_aislante_rosa">
+            <field name="name">100024</field>
+            <field name="description">Cinta aislante rosa</field>
+            <field name="quantity">30</field>
+            <field name="metric_unit">unidades</field>
+        </record>
+        <record model="instalacion.material" id="instalacion.Pasamuros_20">
+            <field name="name">100025</field>
+            <field name="description">Pasamuros 20</field>
+            <field name="quantity">30</field>
+            <field name="metric_unit">unidades</field>
+        </record>
+        <record model="instalacion.material" id="instalacion.Pasamuros_30">
+            <field name="name">100026</field>
+            <field name="description">Pasamuros 30</field>
+            <field name="quantity">30</field>
+            <field name="metric_unit">unidades</field>
+        </record>
+        <record model="instalacion.material" id="instalacion.Pasamuros_huecos_20">
+            <field name="name">100027</field>
+            <field name="description">Pasamuros huecos 20</field>
+            <field name="quantity">30</field>
+            <field name="metric_unit">unidades</field>
+        </record>
+        <record model="instalacion.material" id="instalacion.Pasamuros_huecos_30">
+            <field name="name">100028</field>
+            <field name="description">Cinta aislante amarilla</field>
+            <field name="quantity">30</field>
+            <field name="metric_unit">unidades</field>
+        </record>
+        <record model="instalacion.material" id="instalacion.Conector_macho">
+            <field name="name">100029</field>
+            <field name="description">Conector macho</field>
+            <field name="quantity">30</field>
+            <field name="metric_unit">unidades</field>
+        </record>
+        <record model="instalacion.material" id="instalacion.Conector_hembra">
+            <field name="name">100030</field>
+            <field name="description">Conector hembra</field>
+            <field name="quantity">30</field>
+            <field name="metric_unit">unidades</field>
+        </record>
+
+    </data>
+</odoo>

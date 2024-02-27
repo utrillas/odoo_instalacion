@@ -1,0 +1,108 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="instalacion.instalacion_window_tree">
+      <field name="name">instalacion lista</field>
+      <field name="model">instalacion.instalacion</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="instalacion.instalacion_window_form">
+      <field name="name">Site</field>
+      <field name="model">instalacion.instalacion</field>
+      <field name="arch" type="xml">
+        <form>
+        <!--Vista datos generales-->
+          <group >
+            <field name="name"/>
+            <field name="owner"/>
+            <field name="address"/>
+            <field name="population"/>
+            <field name="coordinates"/>
+            <field name="work_order_ids" string="OT">
+              <separator string="OT"/>
+              <tree>
+                <field name="name"/>
+                <field name="date_creation"/>
+                <field name="date_staking_out"/>
+                <field name="date_work"/>
+                <field name="date_end"/>
+              </tree>
+            </field>
+            <field name="remarks"/>
+          </group>
+        <!--Vista replanteo-->
+          <group> 
+            <notebook>
+              <page string="replanteo">
+                 
+              </page>
+        <!--Vista material extra-->
+              <page string="Material Extra">
+                
+              </page>
+
+              <!--Vista Técnico y PRL-->
+              <page string="Técnicos y PRL">
+                
+              </page>
+                      <!--Vista obra--> 
+              <page string="obra">
+                
+              </page>              
+            </notebook>
+          </group>
+        </form>
+      </field>
+    </record>
+
+
+  
+
+        <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="instalacion.action_window">
+      <field name="name">instalacion Site</field>
+      <field name="res_model">instalacion.instalacion</field>
+      <field name="view_mode">tree,form</field>
+    </record>  
+
+
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="instalacion.action_server">
+      <field name="name">instalacion server</field>
+      <field name="model_id" ref="model_instalacion_instalacion"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+    <!-- Top menu item -->
+
+    <menuitem name="instalaciones" id="instalacion.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Lista" id="instalacion.lista" parent="instalacion.menu_root"/>
+    <!-- <menuitem name="Menu 2" id="instalacion.menu_2" parent="instalacion.menu_root"/> -->
+
+    <!-- actions -->
+
+    <menuitem name="site" id="instalacion.lista_site" parent="instalacion.lista"
+              action="instalacion.action_window"/>
+    <!-- <menuitem name="Server to list" id="instalacion" parent="instalacion.menu_2" 
+              action="instalacion.action_server"/>-->
+
+  </data>
+</odoo>
