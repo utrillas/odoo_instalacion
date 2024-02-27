@@ -8,7 +8,7 @@ from . import employee
 
 from . import technical
 
-from . import installationsOffice
+from . import installations_office
 
 from . import material
 
