@@ -3,7 +3,7 @@
 from odoo import models, fields, api
 
 
-class Employee(models.AbstractModel):
+class Employee(models.Model):
      _name = 'instalacion.employee'
      _description = 'employees of the company'
 
@@ -16,12 +16,16 @@ class Employee(models.AbstractModel):
      employee_address = fields.Text('Direccion')
      personal_phone = fields.Char('Telefono personal')
      company_phone = fields.Char('Telefono empresa')
-     work_section = fields.Selection([
-          ('installations_office', 'Oficina de instalaciones'),
-          ('tecnical', 'Tecnico')
-
-     ], required= True)
-
+     position = fields.Selection([
+          ('director regional','Director regional'),
+          ('responsable Instalaciones','Responsable Instalaciones'),
+          ('project Manager','Project Manager'),
+          ('coordinador','Coordinador'),
+          ('tecnido documentacion','Tecnico documentacion'),
+          ('secretaria','Secretaria'),
+          ('tecnico de instalaciones', 'tecnico de instalaciones')
+          ],required=True, default='Seleccione un cargo')
+     
 
      #restricciones
      _sql_constraints = [

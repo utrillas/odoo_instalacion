@@ -12,6 +12,20 @@
         </tree>
       </field>
     </record>
+
+    <!--Vista de empleados-->
+    <record model="ir.ui.view" id="instalacion.employee_window_tree">
+      <field name="name">employee lista</field>
+      <field name="model">instalacion.employee</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="firstname"/>
+          <field name="employee_name"/>
+          <field name="position"/>
+        </tree>
+      </field>
+    </record>
     <!-- explicit list view definition -->
 
     <record model="ir.ui.view" id="instalacion.instalacion_window_tree">
@@ -87,7 +101,11 @@
       <field name="res_model">instalacion.material</field>
       <field name="view_mode">tree,form</field>
     </record>  
-
+    <record model="ir.actions.act_window" id="instalacion.action_window_employee">
+      <field name="name">instalacion Empleado</field>
+      <field name="res_model">instalacion.employee</field>
+      <field name="view_mode">tree,form</field>
+    </record> 
 
 
     <!-- server action to the one above -->
@@ -120,6 +138,8 @@
               action="instalacion.action_window"/>
     <menuitem name="material" id="instalacion.lista_material" parent="instalacion.lista"
               action="instalacion.action_window_material"/>
+    <menuitem name="empleado" id="instalacion.lista_employee" parent="instalacion.lista"
+              action="instalacion.action_window_employee"/>
     <!-- <menuitem name="Server to list" id="instalacion" parent="instalacion.menu_2" 
               action="instalacion.action_server"/>-->
 

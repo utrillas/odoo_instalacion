@@ -23,5 +23,5 @@ class Material(models.Model):
           ('unique_product_code','unique(name)','El código ya existe')
      ]
 
-
+     #restriccion de usuarios a la creación de materiales   
     
