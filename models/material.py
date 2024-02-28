@@ -23,8 +23,10 @@ class Material(models.Model):
           ('unique_product_code','unique(name)','El código ya existe')
      ]
 
+     sock_ids = fields.One2many('instalacion.work_order_material_rel', 'material_id',  string='Material existente')
         
      @api.model
      def create(self, vals):
           vals['name'] = self.env['ir.sequence'].next_by_code('secuencia_material')
           return super(Material,self).create(vals)
+     

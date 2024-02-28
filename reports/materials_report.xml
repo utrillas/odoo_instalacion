@@ -1,0 +1,35 @@
+<odoo>
+    <record id="materials_pdf_report" model="ir.actions.report">
+        <field name="name">Inventario de stock de almacén</field>
+        <field name="model">instalacion.material</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">instalacion.material_report</field>
+        <field name="binding_model_id" ref="model_instalacion_material"/>
+        <field name="binding_type">report</field>
+        <field name="binding_view_types">list,form</field>
+        <field name="print_report_name">'Stock almacén %s'</field>
+    </record>
+    <template id="instalacion.material_report">
+        <t t-call="web.html_container">
+            <!--Para imprimir mas de un material-->
+            <t t-foreach="docs" t-as="doc">
+                <table style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Descripción</th>
+                            <th>Cantidad</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><t t-esc="doc.name"/></td>
+                            <td><t t-esc="doc.description"/></td>
+                            <td><t t-esc="doc.quantity"/></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </t>
+        </t>
+    </template>
+</odoo>

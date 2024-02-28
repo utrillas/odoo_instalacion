@@ -12,4 +12,4 @@ from . import installations_office
 
 from . import material
 
-from . import extra_material_rel
+from . import work_order_material_rel

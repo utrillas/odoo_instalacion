@@ -16,7 +16,7 @@ class Instalacion(models.Model):
      remarks = fields.Text('Observaciones')
      
      #relaciones con las tablas 
-     work_order_ids = fields.One2many('instalacion.work_order', 'name', 'Orden de trabajo')
+     work_order_ids = fields.One2many('instalacion.work_order', 'instalacion_id', 'Orden de trabajo')
      empleados_technical_ids = fields.Many2many('instalacion.technical')
      empleados_of_installations_ids= fields.Many2many('instalacion.of_installations')
      

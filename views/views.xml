@@ -1,6 +1,5 @@
 <odoo>
   <data>
-
   <!--Vista de materiales-->
     <record model="ir.ui.view" id="instalacion.material_window_tree">
       <field name="name">material lista</field>
@@ -61,7 +60,7 @@
       </field>
     </record>
       
-    <!-- explicit list view definition -->
+    <!-- Vistas instalacion -->
 
     <record model="ir.ui.view" id="instalacion.instalacion_window_tree">
       <field name="name">instalacion lista</field>

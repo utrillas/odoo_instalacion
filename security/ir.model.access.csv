@@ -5,4 +5,4 @@ access_instalacion_employee,instalacion.employee,model_instalacion_employee,base
 access_instalacion_installations_office,instalacion.installations_office,model_instalacion_installations_office,base.group_user,1,1,1,1
 access_instalacion_technical,instalacion.technical,model_instalacion_technical,base.group_user,1,1,1,1
 access_instalacion_material,instalacion.material,model_instalacion_material,base.group_user,1,1,1,1
-access_instalacion_extra_material_rel,instalacion.extra_material_rel,model_instalacion_extra_material_rel,base.group_user,1,1,1,1
+access_instalacion_work_order_material_rel,instalacion.work_order_material_rel,model_instalacion_work_order_material_rel,base.group_user,1,1,1,1

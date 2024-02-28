@@ -10,7 +10,7 @@ class WorkOrder(models.Model):
      _description = 'Work order of a site'
 
      #datos generales de la orden de trabajo
-     name = fields.Char(string='PI', required = True) 
+     name = fields.Char(string='PI', readonly='1') 
      date_creation = fields.Date(string= 'Fecha creación', default=lambda self: fields.Date.today())
      date_staking_out = fields.Date(string='Fecha replanteo')
      date_work = fields.Date(string='Fecha Obra')
@@ -25,8 +25,8 @@ class WorkOrder(models.Model):
 
 
      #relaciones con las tablas 
-     need_material_ids = fields.Many2many('instalacion.material', string='Material extra')
-     #instalacion_id = fields.Many2one('instalacion.instalacion', 'Nueva orden de trabajo en Site')
+     need_material_ids = fields.One2many('instalacion.work_order_material_rel', 'work_order_id', string='Necesidades de material')
+     instalacion_id = fields.Many2one('instalacion.instalacion', 'Nueva orden de trabajo en Site')
      stakeout_technician_ids = fields.Many2many('instalacion.technical', string='Tecnico replanteo')
 
      #restricciones
