@@ -12,24 +12,39 @@
     <template id="instalacion.material_report">
         <t t-call="web.html_container">
             <!--Para imprimir mas de un material-->
-            <t t-foreach="docs" t-as="doc">
-                <table style="width: 100%;">
-                    <thead>
-                        <tr>
-                            <th>Código</th>
-                            <th>Descripción</th>
-                            <th>Cantidad</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><t t-esc="doc.name"/></td>
-                            <td><t t-esc="doc.description"/></td>
-                            <td><t t-esc="doc.quantity"/></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </t>
+            <t t-call="web.external_layout">    
+                <!--Encabezado del pdf-->
+                <div>
+                    <h2 style="color: #00FFFF; font-size= 24px; font-weight: bold;">Stock almacen</h2>
+                    <table style="width: 100%; page-break-inside: avoid;">   
+                        <thead>
+                            <tr>
+                                <th style="background-color: #40E0D0;">Código</th>
+                                <th style="background-color: #40E0D0;">Descripción</th>
+                                <th style="background-color: #40E0D0;">Cantidad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="docs" t-as="doc">
+                                <t t-set="row_class" t-value="'odd'"/>
+                                <t t-if="doc_index % 2 == 0">
+                                    <t t-set="row_class" t-value="'even'"/>
+                                </t>
+                                <tr t-att-class="row_class">
+                                    <style>
+                                        .even{ background-color: #f2f2f2;}
+                                        .odd{ background-color: #ffffff;}
+                                    </style>
+                                
+                                    <td><t t-esc="doc.name"/></td>
+                                    <td><t t-esc="doc.description"/></td>
+                                    <td><t t-esc="doc.quantity"/></td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>     
+                </div>  
+            </t>   
         </t>
     </template>
 </odoo>
