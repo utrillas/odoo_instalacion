@@ -6,6 +6,7 @@ from odoo import models, fields, api
 class Material(models.Model):
      _name = 'instalacion.material'
      _description = 'Stock en almacen'
+     _rec_name = 'description'
 
      name = fields.Char(string='codigo ', readonly=1)
      description = fields.Text(string= 'descripcion', required=True)

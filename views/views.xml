@@ -40,6 +40,7 @@
       <field name="model">instalacion.employee</field>
       <field name="arch" type="xml">
         <form>
+
         <!--Vista datos generales-->
           <sheet>
                 <group>
@@ -58,7 +59,7 @@
       </field>
     </record>
       
-    <!-- Vistas instalacion -->
+    <!-- Vistas  lista instalacion -->
 
     <record model="ir.ui.view" id="instalacion.instalacion_window_tree">
       <field name="name">instalacion lista</field>
@@ -69,11 +70,21 @@
         </tree>
       </field>
     </record>
+    <!-- vista instalacion -->
     <record model="ir.ui.view" id="instalacion.instalacion_window_form">
       <field name="name">Site</field>
       <field name="model">instalacion.instalacion</field>
       <field name="arch" type="xml">
         <form>
+                <!--Header-->
+          <header>
+            <field name="fase" widget="statusbar" statusbar_visible="ENT, REP, PREP, OBRA, FIN"/>
+            <button name="funcion_replanteo"
+                    string="confirmar"
+                    class="oe_highlight"                                                         
+                    confirm="Aceptar para siguiemte fase"
+                    type="object"/>
+          </header>
         <!--Vista datos generales-->
           <group >
             <field name="name"/>
@@ -82,8 +93,8 @@
             <field name="population"/>
             <field name="coordinates"/>
             <field name="remarks"/>
+            <field name="material"/>
             <field name="work_order_ids" string="OT">
-              <separator string="OT"/>
               <tree>
                 <field name="name"/>
                 <field name="date_creation"/>
@@ -110,6 +121,7 @@
               </page>
         <!--Vista material extra-->
               <page string="Material Extra">
+
                 
               </page>
 

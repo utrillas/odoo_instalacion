@@ -15,6 +15,7 @@ class WorkOrderMaterialRel(models.Model):
      #relacion entre las tablas work_order y material
      material_id = fields.Many2one('instalacion.material')# codigo del material que queremos coger del stock
      work_order_id = fields.Many2one('instalacion.work_order')#PI del site
+     material_name = fields.Char(related='material_id.name')
 
      _sql_constraints = [
           ('unique_material_work_order', 'unique(material_id,work_order_id)','El material no se encuentra')

@@ -6,6 +6,7 @@ from odoo import models, fields, api
 class Employee(models.Model):
      _name = 'instalacion.employee'
      _description = 'employees of the company'
+     _rec_name = 'employee_name'
 
      #datos principales de los trabajadores
      name = fields.Integer(string='Numero empleado')

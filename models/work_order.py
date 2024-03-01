@@ -24,6 +24,9 @@ class WorkOrder(models.Model):
      rejected_staking_out = fields.Boolean('Rechazado replanteo', widget='binary')
      technical_employee_name = fields.Char(related='technical_staking_out_ids.employee_name')
 
+     #obra
+
+     
      #relaciones con las tablas 
      need_material_ids = fields.One2many('instalacion.work_order_material_rel', 'work_order_id', string='Necesidades de material')
      instalacion_id = fields.Many2one('instalacion.instalacion', 'Nueva orden de trabajo en Site')
@@ -31,13 +34,20 @@ class WorkOrder(models.Model):
                                                   string='Técnico de replanteo',
                                                   domain="[('position', '=', 'tecnico_de_instalaciones')]",
                                                   )
+     
+     
+
 
      #restricciones
      _sql_constraints = [
           ('unique_name','unique(name)','La PI ya existe')
      ]
 
-"""
+     #función para que la relacion de technical_staking_out_ids me devuelva el nombre del tecnico 
+     
+
+
+     """
      #funcion para que me enseñe el texto de material reutilizables
      ##############NO FUNCIONA CUANDO CAMBIE LAS VISTAS, PREGUNTAR POR QUE NO FUNCIONA##########
      @api.onchange('reusable_material')
@@ -54,18 +64,17 @@ class WorkOrder(models.Model):
                     if rec.need_quantity > material.quantity:
                          raise UserError('No hay suficinete cantidad disponible, por favor, hacer compra.')
                     else:
-                         material.write({'producto.quantity': material.quantity - rec.need_quantity})
+                         material.write({'producto.quantity': material.quantity - rec.need_quantity})"""
 
      #funcion para que los datos del replanteo sean editables
-     @api.onchange('date_staking_out')
+     """ @api.onchange('date_staking_out')
      def onchange_date_staking_out(self):
           for rec in self:
                if rec.date_staking_out:
                     rec.update({
-                         'date_staking_out':False
+                         'technical_employee_name':True
                     })
                else:
                     rec.update({
-                         'date_staking_out': True
-                    })
-"""
+                         'technical_employee_name': False
+                    }) """
