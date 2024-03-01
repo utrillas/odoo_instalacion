@@ -24,7 +24,18 @@
         </tree>
       </field>
     </record>
-
+    <!--Vista de reserva material-->
+    <record model="ir.ui.view" id="instalacion.reserva_window_tree">
+      <field name="name">employee lista</field>
+      <field name="model">instalacion.work_order_material_rel</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="material_name"/>
+          <field name="needed_material"/>
+        </tree>
+      </field>
+    </record>
     <!--Vista interior de empleados-->
     <record model="ir.ui.view" id="instalacion.employee_window_tree">
       <field name="name">instalacion lista</field>
@@ -159,6 +170,11 @@
       <field name="res_model">instalacion.employee</field>
       <field name="view_mode">tree,form</field>
     </record> 
+    <record model="ir.actions.act_window" id="instalacion.action_window_reserva">
+      <field name="name">instalacion Empleado</field>
+      <field name="res_model">instalacion.work_order_material_rel</field>
+      <field name="view_mode">tree,form</field>
+    </record>
 
 
     <!-- server action to the one above -->
@@ -193,6 +209,8 @@
               action="instalacion.action_window_material"/>
     <menuitem name="empleado" id="instalacion.lista_employee" parent="instalacion.lista"
               action="instalacion.action_window_employee"/>
+    <menuitem name="reserva" id="instalacion.lista_reserva" parent="instalacion.lista"
+              action="instalacion.action_window_reserva"/>
     <!-- <menuitem name="Server to list" id="instalacion" parent="instalacion.menu_2" 
               action="instalacion.action_server"/>-->
 
