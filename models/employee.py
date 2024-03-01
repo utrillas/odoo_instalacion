@@ -8,9 +8,8 @@ class Employee(models.Model):
      _description = 'employees of the company'
 
      #datos principales de los trabajadores
-     name = fields.Integer(string='Numero empleado', readonly=1)
-     firstname = fields.Char(string='Apellidos')
-     employee_name = fields.Char(string='Nombre')
+     name = fields.Integer(string='Numero empleado')
+     employee_name = fields.Char(string='Nombre completo')
      email = fields.Char('Correo electronico')
      studies = fields.Text('Estudios')
      employee_address = fields.Text('Direccion')
@@ -21,14 +20,14 @@ class Employee(models.Model):
           ('responsable_instalaciones','Responsable Instalaciones'),
           ('project_manager','Project Manager'),
           ('coordinador','Coordinador'),
-          ('tecnido_documentacion','Tecnico documentacion'),
+          ('tecnico_documentacion','Tecnico documentacion'),
           ('secretaria','Secretaria'),
           ('tecnico_de_instalaciones', 'tecnico de instalaciones')
           ],required=True, default='Seleccione un cargo')
      preventive_resource = fields.Boolean(
           string='Recurso preventivo',
-          store=True
-     )
+          store=True)
+     
 
      #restricciones
      _sql_constraints = [
@@ -37,8 +36,15 @@ class Employee(models.Model):
           ('unique_company_phone','unique(company_phone)','El numero de telefono ya esta siendo utilizado por otro empleado') 
      ]
 
+     #relaciones con las tablas
+     employee_work_order_id = fields.Many2one('instalacion.work_order')
      
-     @api.model
-     def create(self, vals):
+     #crea un codigo de empleado
+     """def create(self, vals):
           vals['name'] = self.env['ir.sequence'].next_by_code('secuencia_empleado')
-          return super(Employee,self).create(vals)
+          return super(Employee, self).create(vals)"""
+     """def create(self, vals):
+          if isinstance(vals, list):
+               vals = vals[0]  # Si vals es una lista, toma el primer elemento como diccionario
+               vals['name'] = self.env['ir.sequence'].next_by_code('secuencia_empleado')
+               return super(Employee, self).create(vals)"""

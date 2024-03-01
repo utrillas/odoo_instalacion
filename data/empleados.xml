@@ -1,0 +1,103 @@
+<odoo>
+    <data>
+        <!-- <record id="secuenciaempleado" model="ir.sequence">
+            <field name="name">Secuencia empleado</field>
+            <field name="code">secuencia_empleado</field>
+            <field name="padding">6</field>
+            <field name="number_increment">1</field>
+            <field name="number_next_actual">1</field>
+            <field name="implementation">standard</field>
+        </record> -->
+        <record model="instalacion.employee" id="instalacion.empleado1">
+            <field name="name">1</field>
+            <field name="employee_name">Luis Lopez Lopez</field>
+            <field name="email">l.lopezlopez@telecomunicaciones.es</field>
+            <field name="studies">Ingeniero en telecomunicaciones</field>
+            <field name="employee_address">c/ de la paciencia</field>
+            <field name="personal_phone">111-111-111</field>
+            <field name="company_phone">111-111-111</field>
+            <field name="position">directorRegional</field>
+        </record>
+        <record model="instalacion.employee" id="instalacion.empleado2">
+            <field name="name">2</field>
+            <field name="employee_name">Mario Martinez Martinez</field>
+            <field name="email">m.martinezmartinez@telecomunicaciones.es</field>
+            <field name="studies">Ingeniero en telecomunciaciones</field>
+            <field name="employee_address">c/ de la paciencia</field>
+            <field name="personal_phone">111-111-112</field>
+            <field name="company_phone">111-111-112</field>
+            <field name="position">responsable_instalaciones</field>
+        </record>
+        <record model="instalacion.employee" id="instalacion.empleado3">
+            <field name="name">3</field>
+            <field name="employee_name">Maria Martinez Perez</field>
+            <field name="email">m.martinezperez@telecomunicaciones.es</field>
+            <field name="studies">Ingeniero en telecomunciaciones</field>
+            <field name="employee_address">c/ de la paciencia</field>
+            <field name="personal_phone">111-111-113</field>
+            <field name="company_phone">111-111-113</field>
+            <field name="position">project_manager</field>
+        </record>
+        <record model="instalacion.employee" id="instalacion.empleado4">
+            <field name="name">4</field>
+            <field name="employee_name">Claudia Perez Perez</field>
+            <field name="email">c.perezperez@telecomunicaciones.es</field>
+            <field name="studies">Técnico superior en Telecomunicaciones</field>
+            <field name="employee_address">c/ de la paciencia</field>
+            <field name="personal_phone">111-111-114</field>
+            <field name="company_phone">111-111-114</field>
+            <field name="position">project_manager</field>
+        </record>
+        <record model="instalacion.employee" id="instalacion.empleado5">
+            <field name="name">5</field>
+            <field name="employee_name">Carlos Perez Solis</field>
+            <field name="email">c.perezsolis@telecomunicaciones.es</field>
+            <field name="studies">Técnico superior en Telecomunicaciones</field>
+            <field name="employee_address">c/ de la paciencia</field>
+            <field name="personal_phone">111-111-115</field>
+            <field name="company_phone">111-111-115</field>
+            <field name="position">coordinador</field>
+        </record>
+        <record model="instalacion.employee" id="instalacion.empleado6">
+            <field name="name">6</field>
+            <field name="employee_name">Elvira Suarez Solis</field>
+            <field name="email">e.suarezsolis@telecomunicaciones.es</field>
+            <field name="studies">Técnico superior en Telecomunicaciones</field>
+            <field name="employee_address">c/ de la paciencia</field>
+            <field name="personal_phone">111-111-116</field>
+            <field name="company_phone">111-111-116</field>
+            <field name="position">tecnico_documentacion</field>
+        </record>
+        <record model="instalacion.employee" id="instalacion.empleado7">
+            <field name="name">7</field>
+            <field name="employee_name">Ernesto Suarez Fernandez</field>
+            <field name="email">e.suarezfernandez@telecomunicaciones.es</field>
+            <field name="studies">Técnico superior en Telecomunicaciones</field>
+            <field name="employee_address">c/ de la paciencia</field>
+            <field name="personal_phone">111-111-117</field>
+            <field name="company_phone">111-111-117</field>
+            <field name="position">secretaria</field>
+        </record>
+        <record model="instalacion.employee" id="instalacion.empleado8">
+            <field name="name">8</field>
+            <field name="employee_name">Leonor Fernandez Toledo</field>
+            <field name="email">l.fernandeztoledo@telecomunicaciones.es</field>
+            <field name="studies">Técnico superior en Telecomunicaciones</field>
+            <field name="employee_address">c/ de la paciencia</field>
+            <field name="personal_phone">111-111-118</field>
+            <field name="company_phone">111-111-118</field>
+            <field name="position">tecnico_de_instalaciones</field>
+            <field name="preventive_resource">t</field>
+        </record>
+        <record model="instalacion.employee" id="instalacion.empleado9">
+            <field name="name">9</field>
+            <field name="employee_name">Luca Gonzalez Lucas</field>
+            <field name="email">l.gonzalezlucas@telecomunicaciones.es</field>
+            <field name="studies">Técnico superior en Telecomunicaciones</field>
+            <field name="employee_address">c/ de la paciencia</field>
+            <field name="personal_phone">111-111-119</field>
+            <field name="company_phone">111-111-119</field>
+            <field name="position">tecnico_de_instalaciones</field>
+        </record>
+    </data>
+</odoo>

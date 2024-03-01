@@ -35,7 +35,6 @@
                                         .even{ background-color: #f2f2f2;}
                                         .odd{ background-color: #ffffff;}
                                     </style>
-                                
                                     <td><t t-esc="doc.name"/></td>
                                     <td><t t-esc="doc.description"/></td>
                                     <td><t t-esc="doc.quantity"/></td>

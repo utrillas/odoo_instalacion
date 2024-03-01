@@ -7,7 +7,7 @@ class Material(models.Model):
      _name = 'instalacion.material'
      _description = 'Stock en almacen'
 
-     name = fields.Char(string='codigo ', readonly=1)
+     name = fields.Char(string='codigo ')
      description = fields.Text(string= 'descripcion', required=True)
      quantity = fields.Integer(string='cantidad')
      metric_unit = fields.Selection([
@@ -25,8 +25,8 @@ class Material(models.Model):
 
      sock_ids = fields.One2many('instalacion.work_order_material_rel', 'material_id',  string='Material existente')
         
-     @api.model
+     """ @api.model
      def create(self, vals):
           vals['name'] = self.env['ir.sequence'].next_by_code('secuencia_material')
-          return super(Material,self).create(vals)
+          return super(Material,self).create(vals) """
      

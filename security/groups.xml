@@ -1,0 +1,32 @@
+<odoo>
+    <data noupdate="1">
+        <record id="instalacion.category_instalacion" model="ir.module.category">
+            <field name="name">Instalacion</field>
+        </record>
+        <record id="instalacion.instalacion_direccion_grupo" model="res.groups">
+            <field name="name">Direccion</field>
+            <field name="category_id" ref="instalacion.category_instalacion"/>
+        </record>
+        <record id="instalacion.instalacion_manager_grupo" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="instalacion.category_instalacion"/>
+        </record>    
+        <record id="instalacion.instalacion_coordinador_grupo" model="res.groups">
+            <field name="name">Coordinador</field>
+            <field name="category_id" ref="instalacion.category_instalacion"/>
+        </record>
+        <record id="instalacion.instalacion_secretaria_grupo" model="res.groups">
+            <field name="name">Secretaria</field>
+            <field name="category_id" ref="instalacion.category_instalacion"/>
+        </record>
+        <record id="instalacion.instalacion_documentacion_grupo" model="res.groups">
+            <field name="name">Documentacion</field>
+            <field name="category_id" ref="instalacion.category_instalacion"/>
+        </record>
+        <record id="instalacion.instalacion_tecnicos_grupo" model="res.groups">
+            <field name="name">Tecnicos</field>
+            <field name="category_id" ref="instalacion.category_instalacion"/>
+        </record>
+
+    </data>
+</odoo>

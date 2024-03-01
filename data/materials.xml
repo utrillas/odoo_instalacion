@@ -1,13 +1,13 @@
 <odoo>
     <data>
-        <record id="secuenciamaterial" model="ir.sequence">
+        <!-- <record id="secuenciamaterial" model="ir.sequence">
             <field name="name">Secuencia material</field>
             <field name="code">secuencia_material</field>
             <field name="padding">6</field>
             <field name="number_increment">1</field>
             <field name="number_next_actual">1</field>
             <field name="implementation">standard</field>
-        </record>
+        </record> -->
         <record model="instalacion.material" id="instalacion.Tornillo_M8_acero_galvanizado">
             <field name="description">Tornillo M8 acero galvanizado</field>
             <field name="quantity">200</field>
@@ -157,14 +157,6 @@
             <field name="description">Conector hembra</field>
             <field name="quantity">30</field>
             <field name="metric_unit">unidades</field>
-        </record>
-        <record id="secuenciaempleado" model="ir.sequence">
-            <field name="name">Secuencia empleado</field>
-            <field name="code">secuencia_empleado</field>
-            <field name="padding">6</field>
-            <field name="number_increment">1</field>
-            <field name="number_next_actual">1</field>
-            <field name="implementation">standard</field>
         </record>
     </data>
 </odoo>

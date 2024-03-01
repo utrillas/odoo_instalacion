@@ -14,11 +14,9 @@ class Instalacion(models.Model):
      population = fields.Char('Poblacion', size=100)
      coordinates = fields.Char('Coordenadas', size=50)
      remarks = fields.Text('Observaciones')
-     
+     technical_staking_out = fields.One2many(string='Tecnico replanteo', related='work_order_ids')
      #relaciones con las tablas 
      work_order_ids = fields.One2many('instalacion.work_order', 'instalacion_id', 'Orden de trabajo')
-     empleados_technical_ids = fields.Many2many('instalacion.technical')
-     empleados_of_installations_ids= fields.Many2many('instalacion.of_installations')
      
      
      _sql_constraints = [

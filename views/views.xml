@@ -19,7 +19,6 @@
       <field name="arch" type="xml">
         <tree>
           <field name="name"/>
-          <field name="firstname"/>
           <field name="employee_name"/>
           <field name="position"/>
         </tree>
@@ -45,7 +44,6 @@
           <sheet>
                 <group>
                     <field name="name"/>
-                    <field name="firstname"/>
                     <field name="employee_name"/>
                     <field name="email"/>
                     <field name="studies"/>
@@ -83,6 +81,7 @@
             <field name="address"/>
             <field name="population"/>
             <field name="coordinates"/>
+            <field name="remarks"/>
             <field name="work_order_ids" string="OT">
               <separator string="OT"/>
               <tree>
@@ -92,14 +91,22 @@
                 <field name="date_work"/>
                 <field name="date_end"/>
               </tree>
-            </field>
-            <field name="remarks"/>
+            </field>  
           </group>
         <!--Vista replanteo-->
           <group> 
             <notebook>
               <page string="replanteo">
-                 
+               <field name="technical_staking_out">
+                  <tree>
+                    <field name="technical_employee_name"/>
+                    <field name="reusable_material"/>
+                    <field name="reusable"/>
+                    <field name="staking_out_data"/>
+                    <field name="approved_staking_out"/>
+                    <field name="rejected_staking_out"/>
+                  </tree>
+                </field> 
               </page>
         <!--Vista material extra-->
               <page string="Material Extra">
