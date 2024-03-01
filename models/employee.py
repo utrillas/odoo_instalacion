@@ -42,9 +42,9 @@ class Employee(models.Model):
      #crea un codigo de empleado
      """def create(self, vals):
           vals['name'] = self.env['ir.sequence'].next_by_code('secuencia_empleado')
-          return super(Employee, self).create(vals)"""
-     """def create(self, vals):
+          return super(Employee, self).create(vals) """
+     """ def create(self, vals):
           if isinstance(vals, list):
                vals = vals[0]  # Si vals es una lista, toma el primer elemento como diccionario
                vals['name'] = self.env['ir.sequence'].next_by_code('secuencia_empleado')
-               return super(Employee, self).create(vals)"""
+               return super(Employee, self).create(vals) """
