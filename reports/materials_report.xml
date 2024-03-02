@@ -15,7 +15,7 @@
             <t t-call="web.external_layout">    
                 <!--Encabezado del pdf-->
                 <div>
-                    <h2 style="color: #00FFFF; font-size= 24px; font-weight: bold;">Stock almacen</h2>
+                    <h1 style="color: #00FFFF; font-weight: bold;">Stock almacen</h1>
                     <table style="width: 100%; page-break-inside: avoid;">   
                         <thead>
                             <tr>

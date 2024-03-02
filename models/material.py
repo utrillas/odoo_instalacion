@@ -10,21 +10,20 @@ class Material(models.Model):
 
      name = fields.Char(string='codigo ', readonly=1)
      description = fields.Text(string= 'descripcion', required=True)
-     quantity = fields.Integer(string='cantidad')
+     quantity = fields.Float(string='cantidad en Stock')
      metric_unit = fields.Selection([
           ('unidades','unidades'),
           ('metros','metros'),
           ('kilos','kilos')
      ], default='Seleccione las unidades')
-     reserved_quantity = fields.Integer(string='cantidad reservada')
 
      
 
      _sql_constraints = [
-          ('unique_product_code','unique(name)','El código ya existe')
+          ('unique_name','unique(name)','El código ya existe')
      ]
 
-     sock_ids = fields.One2many('instalacion.work_order_material_rel', 'material_id',  string='Material existente')
+     stock_ids = fields.One2many('instalacion.reserve_line', 'material_id',  string='Material existente')
         
      @api.model
      def create(self, vals):

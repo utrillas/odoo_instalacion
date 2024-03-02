@@ -27,12 +27,10 @@
     <!--Vista de reserva material-->
     <record model="ir.ui.view" id="instalacion.reserva_window_tree">
       <field name="name">employee lista</field>
-      <field name="model">instalacion.work_order_material_rel</field>
+      <field name="model">instalacion.reserve_material</field>
       <field name="arch" type="xml">
         <tree>
           <field name="name"/>
-          <field name="material_name"/>
-          <field name="needed_material"/>
         </tree>
       </field>
     </record>
@@ -78,6 +76,7 @@
       <field name="arch" type="xml">
         <tree>
           <field name="name"/>
+          <field name="fase"/>
         </tree>
       </field>
     </record>
@@ -172,7 +171,7 @@
     </record> 
     <record model="ir.actions.act_window" id="instalacion.action_window_reserva">
       <field name="name">instalacion Empleado</field>
-      <field name="res_model">instalacion.work_order_material_rel</field>
+      <field name="res_model">instalacion.reserve_material</field>
       <field name="view_mode">tree,form</field>
     </record>
 

@@ -23,12 +23,9 @@ class WorkOrder(models.Model):
      approved_staking_out = fields.Boolean('Aprobado replanteo', widget='binary')
      rejected_staking_out = fields.Boolean('Rechazado replanteo', widget='binary')
      technical_employee_name = fields.Char(related='technical_staking_out_ids.employee_name')
-
-     #obra
-
      
      #relaciones con las tablas 
-     need_material_ids = fields.One2many('instalacion.work_order_material_rel', 'work_order_id', string='Necesidades de material')
+     need_material_ids = fields.One2many('instalacion.reserve_material', 'work_order_id', string='Necesidades de material')
      instalacion_id = fields.Many2one('instalacion.instalacion', 'Nueva orden de trabajo en Site')
      technical_staking_out_ids = fields.Many2one('instalacion.employee',
                                                   string='Técnico de replanteo',

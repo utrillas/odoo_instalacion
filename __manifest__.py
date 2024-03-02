@@ -30,6 +30,7 @@
         'security/ir.model.access.csv',
         'data/empleados.xml',
         'data/materials.xml',
+        'data/reserve.xml',
         'views/views.xml',
         'views/templates.xml',
         
